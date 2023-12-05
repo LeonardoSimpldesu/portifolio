@@ -1,0 +1,17 @@
+.menu {
+    display: flex;
+    padding: 1.25rem 12.5rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.links i{
+    font-size: 2rem;
+    margin-left: 0.5rem;
+}
