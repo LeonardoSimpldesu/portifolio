@@ -1,0 +1,79 @@
+{
+ "mostUsedTechnologies": [
+    {
+        "title": "NodeJS",
+        "icon": "devicon-nodejs-plain colored"
+    },
+    {
+        "title": "HTML",
+        "icon": "devicon-html5-plain-wordmark colored"
+    },
+    {
+        "title": "CSS",
+        "icon": "devicon-css3-plain-wordmark colored"
+    },
+    {
+        "title": "React",
+        "icon": "devicon-react-original-wordmark colored"
+    },
+    {
+        "title": "JavaScript",
+        "icon": "devicon-javascript-plain colored"
+    },
+    {
+        "title": "TypeScript",
+        "icon": "devicon-typescript-plain colored"
+    },
+    {
+        "title": "Eslint",
+        "icon": "devicon-eslint-original colored"
+    }
+],
+"lessUsedTechnologies": [
+    {
+        "title": "TailWindCss",
+        "icon":"devicon-tailwindcss-plain colored"
+    },
+    {
+        "title": "PHP",
+        "icon":"devicon-php-plain colored"
+    },
+    {
+        "title": "JQuery",
+        "icon":"devicon-jquery-plain-wordmark colored"
+    },
+    {
+        "title": "MySQL",
+        "icon":"devicon-mysql-plain colored"
+    },
+    {
+        "title": "SASS",
+        "icon":"devicon-sass-original colored"
+    },
+    {
+        "title": "BootStrap",
+        "icon":"devicon-bootstrap-plain-wordmark colored"
+    },
+    {
+        "title": "MongoDB",
+        "icon":"devicon-mongodb-plain-wordmark colored"
+    },
+    {
+        "title": "ExpressJS",
+        "icon":"devicon-express-original"
+    },
+    {
+        "title": "NextJS",
+        "icon":"devicon-nextjs-original"
+    }
+],
+"softSkills":  [
+    "Programação Orientada a Objeto(POO)",
+    "Linguagem de Modelagem Unificada(UML)",
+    "ApiREST",
+    "Design Patters",
+    "Metodologia Ágil",
+    "NoSQL",
+    "SQL"
+]
+}
