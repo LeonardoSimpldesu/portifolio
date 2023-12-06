@@ -3,11 +3,10 @@
     align-items: center;
     justify-content: center;
 
-    padding: 0 14%;
-
     background-color: var(--dark-color-background);
     color: var(--dark-color-text-primary);
 
+    height: 100%;
 }
 
 .texts {

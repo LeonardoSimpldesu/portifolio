@@ -1,0 +1,18 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.filters{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.projectsList{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+}

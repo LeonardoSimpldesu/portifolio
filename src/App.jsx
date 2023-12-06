@@ -1,16 +1,21 @@
 import React from "react";
 import "./reset.css";
 import "./globals.css";
-// import Home from "./pages/Home";
 import Menu from "./components/Menu";
-import Habilidades from "./pages/Habilidades";
+// import Home from "./pages/Home";
+// import Habilidades from "./pages/Habilidades";
+import Projects from "./pages/Projects";
+import Container from "./components/Container";
+import styles from "./App.module.css";
 
 function App() {
     return (
-        <>
+        <div className={styles.body}>
             <Menu/>
-            <Habilidades/>
-        </>
+            <Container>
+                <Projects/>
+            </Container>
+        </div>
     );
 }
 

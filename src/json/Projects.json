@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "title": "Alura Space",
+        "image": "Alura_Space",
+        "description": "Esse projeto é como um guia para aqueles que verem ver as estrelas. Projeto da alura do curso “React com JavaScript: lidando com arquivos estáticos",
+        "tags": [
+            "HTML",
+            "CSS",
+            "ReactJs"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Alura Space",
+        "image": "Alura_Space",
+        "description": "Esse projeto é como um guia para aqueles que verem ver as estrelas. Projeto da alura do curso “React com JavaScript: lidando com arquivos estáticos",
+        "tags": [
+            "HTML",
+            "CSS",
+            "ReactJs"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Alura Space",
+        "image": "Alura_Space",
+        "description": "Esse projeto é como um guia para aqueles que verem ver as estrelas. Projeto da alura do curso “React com JavaScript: lidando com arquivos estáticos",
+        "tags": [
+            "HTML",
+            "CSS",
+            "ReactJs"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Alura Space",
+        "image": "Alura_Space",
+        "description": "Esse projeto é como um guia para aqueles que verem ver as estrelas. Projeto da alura do curso “React com JavaScript: lidando com arquivos estáticos",
+        "tags": [
+            "HTML",
+            "CSS",
+            "ReactJs"
+        ]
+    }
+]

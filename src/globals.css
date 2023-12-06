@@ -18,4 +18,5 @@ body {
     font-weight: 400;
     line-height: normal;
     color: var(--dark-color-text-primary);
+    box-sizing: border-box;
 }
