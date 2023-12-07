@@ -1,0 +1,19 @@
+
+.option {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon {
+    width: fit-content;
+    display: flex;
+    padding: 0.75rem;
+    align-items: center;
+    border-radius: 0.25rem;
+    background: var(--color-primary);
+}
+
+.texts h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+}

@@ -1,0 +1,87 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.description {
+    color: var(--dark-color-text-primary);
+    text-align: center;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 2.1875rem;
+}
+
+.forms {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.forms h3 {
+    color: var(--dark-color-text-primary);
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.information {
+    display: flex;
+    padding: 2.5rem 2rem;
+    flex-direction: column;
+
+    border-radius: 0.5rem;
+    background: var(--color-secundary);
+}
+
+.options {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form{
+    width: 100%;
+    display: grid;
+    grid-column-gap: 10%;
+    grid-row-gap: 10%;
+    grid-template-columns: 45% 45%;
+}
+
+.form_text {
+    display: flex;
+    flex-direction: column;
+}
+
+.form_text label {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.form_text input {
+    padding: .5rem .25rem;
+    color: var(--dark-color-text-primary);
+    border: none;
+    border-bottom: 1px solid var(--color-primary);
+    background: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+.form_message {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.form_message textarea{
+    background: none;
+    border: none;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-primary);
+}
