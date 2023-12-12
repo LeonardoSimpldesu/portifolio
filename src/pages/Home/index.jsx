@@ -1,20 +1,108 @@
 import React from "react";
-import styles from "./Home.module.css";
+
+import styled from "styled-components";
+
+const Container = styled.section`
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    background-color: var(--dark-color-background);
+    color: var(--dark-color-text-primary);
+
+    height: 100%;
+    width: 100%;
+`;
+
+const Button = styled.button`
+    background: 
+    ${props => props.$primary ? "none" : "var(--color-secundary)"};
+    border-color: 
+    ${props => props.$primary ? "var(--color-primary)" : "var(--color-secundary)"};
+    color: 
+    ${props => props.$primary ? "var(--color-primary)" : "var(--dark-color-text-primary)"};
+
+    cursor: pointer;
+    border-radius: 0.5rem;
+    padding: 1rem 1.125rem;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-width: 2px;
+    border-style: solid;
+    margin-right: 2rem;
+    transition: all 0.2s ease-out;
+
+    &:hover{ 
+    background: 
+    ${props => props.$primary ? "var(--color-primary)" : "var(--color-secundary)"};
+    color:
+    ${props => props.$primary ? "var(--dark-color-text-primary)" : ""};
+    -webkit-box-shadow: 
+    ${props => props.$primary ? "4px 4px 22px 4px rgba(255, 137, 6, 0.3)" : "4px 4px 42px 4px rgba(16, 36, 50, 0.3)"};
+    -moz-box-shadow: ${props => props.$primary ? "4px 4px 22px 4px rgba(255, 137, 6, 0.3)" : "4px 4px 42px 4px rgba(16, 36, 50, 0.3)"};
+    box-shadow: ${props => props.$primary ? "4px 4px 22px 4px rgba(255, 137, 6, 0.3)" : "4px 4px 42px 4px rgba(16, 36, 50, 0.3)"};
+
+    transform: scale(1.01);
+    }
+`;
+
+const Texts = styled.div`
+    margin-right: auto;
+`;
+
+const Title = styled.h1`
+    font-family: var(--font-title);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+`;
+
+const TitleEmphasis = styled.span`
+    color: var(--color-primary);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+`;
+
+const Summary = styled.p`
+    max-width: 80ch;
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2.1875rem;
+    margin: 1rem 0;
+`;
+
+const Emphasis = styled.span`
+    color: var(--color-primary);
+`;
+
+const Profile = styled.img`
+    width: 14.58331rem;
+    border-radius: 0.625rem;
+    border: 1px solid var(--color-primary);
+`;
 
 export default function Home() {
     return (
-        <section className={styles.main}>
-            <div className={styles.texts}>
-                <h1 className={styles.title}>Meu nome é Leonardo e sou <br></br>
-                    <span className={styles.title_emphasis}> Desenvolvedor Front-End</span>
-                </h1>
+        <Container>
+            <Texts>
+                <Title>Meu nome é Leonardo e sou <br></br>
+                    <TitleEmphasis> Desenvolvedor Front-End</TitleEmphasis>
+                </Title>
                     
-                <p className={styles.summary}>Olá, meu nome é Leonardo, e sou um desenvolvedor front-end. Tenho experiências em criar websites intuitivo usando <span className={styles.emphasis}> HTML </span>, <span className={styles.emphasis}>CSS</span>, <span className={styles.emphasis}>JavaScript</span> e <span className={styles.emphasis}>ReactJs</span>. Possou habilidades de design, além de técnicas de codificação</p>
+                <Summary>Olá, meu nome é Leonardo, e sou um desenvolvedor front-end. Tenho experiências em criar websites intuitivo usando <Emphasis> HTML </Emphasis>, <Emphasis>CSS</Emphasis>, <Emphasis>JavaScript</Emphasis> e <Emphasis>ReactJs</Emphasis>. Possou habilidades de design, além de técnicas de codificação</Summary>
 
-                <button className={styles.btn_primary}>Entre em Contato</button>
-                <button className={styles.btn_secundary}>Curriculo PDF</button>
-            </div>
-            <img src="./perfil.png" alt="Foto de Leonardo" className={styles.profile} />
-        </section>
+                <Button $primary>Entre em Contato</Button>
+                <Button>Curriculo PDF</Button>
+            </Texts>
+            <Profile src="./perfil.png" alt="Foto de Leonardo"/>
+        </Container>
     );
 }

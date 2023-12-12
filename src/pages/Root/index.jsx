@@ -1,17 +1,29 @@
 import React from "react";
-import styles from "./Root.module.css";
 import { Outlet } from "react-router-dom";
 
-import Container from "../../components/Container";
 import Menu from "../../components/Menu";
+import styled from "styled-components";
+
+const Corpo = styled.div`
+  min-height: 100vh;
+`;
+
+const Container = styled.main`
+    padding: 0 12.5rem;
+    min-height: 90vh;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`;
 
 export default function Root() {
     return (
-        <div className={styles.body}>
-            <Menu/>
+        <Corpo>
+            <Menu />
             <Container>
-                <Outlet/>
+                <Outlet />
             </Container>
-        </div>
+        </Corpo>
     );
 }

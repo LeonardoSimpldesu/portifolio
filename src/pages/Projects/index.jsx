@@ -1,30 +1,51 @@
 import React from "react";
-import styles from "./Projects.module.css";
 
 import Title from "../../components/Title";
 import Tag from "../../components/Tag";
 import Project from "../../components/Project";
 
-import ProjectsList from "../../json/Projects.json";
+import ProjectsJson from "../../json/Projects.json";
+
+import styled from "styled-components";
+
+const Container = styled.section`
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+`;
+
+const Filters = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+`;
+
+const ProjectList = styled.div`
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+`;
+
 
 export default function Projects() {
     return (
-        <section className={styles.container}>
+        <Container>
             <Title>
                 Projetos Em Destaque
             </Title>
-            <div className={styles.filters}>
+            <Filters>
                 <Tag>Recentes</Tag>
                 <Tag>Antigos</Tag>
                 <Tag>Complexos</Tag>
-            </div>
-            <div className={styles.projectsList}>
-                {ProjectsList.map((item) => {
+            </Filters>
+            <ProjectList>
+                {ProjectsJson.map((item) => {
                     return(
                         <Project {...item} key={item.id}/>
                     );
                 })}
-            </div>
-        </section>
+            </ProjectList>
+        </Container>
     );
 }

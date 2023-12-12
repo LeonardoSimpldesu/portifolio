@@ -1,16 +1,28 @@
 import React from "react";
-import styles from "./Habilidades.module.css";
 import Tag from "../../components/Tag";
 import TechnologiesDB from "../../json/Technologies.json";
 import Title from "../../components/Title";
 
+import styled from "styled-components";
+
+export const Icones = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 1.5rem;
+    gap: 1.125rem;
+    i{
+    font-size: 5rem;
+}
+`;
+
+
 export default function Habilidades() {
-    console.log(TechnologiesDB);
     return (
-        <section className={styles.habilidades}>
-            <div className={styles.categoria}>
+        <section>
+            <div>
                 <Title>Tecnologias usadas no meu dia a dia</Title>
-                <div className={styles.icones}>
+                <Icones>
                     {TechnologiesDB.mostUsedTechnologies.map((element) => {
                         return (
                             <i
@@ -20,13 +32,13 @@ export default function Habilidades() {
                             ></i>
                         );
                     })}
-                </div>
+                </Icones>
             </div>
-            <div className={styles.categoria}>
+            <div>
                 <Title>
                     Tecnologias que tive contato
                 </Title>
-                <div className={styles.icones}>
+                <Icones>
                     {TechnologiesDB.lessUsedTechnologies.map((element) => {
                         return (
                             <i
@@ -36,17 +48,17 @@ export default function Habilidades() {
                             ></i>
                         );
                     })}
-                </div>
+                </Icones>
             </div>
-            <div className={styles.categoria}>
+            <div>
                 <Title>
                     Conceitos e Soft Skills
                 </Title>
-                <div className={styles.icones}>
+                <Icones>
                     {TechnologiesDB.softSkills.map((element) => {
                         return <Tag key={element}> {element} </Tag>;
                     })}
-                </div>
+                </Icones>
             </div>
         </section>
     );
