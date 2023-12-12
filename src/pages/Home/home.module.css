@@ -1,16 +1,17 @@
 .main {
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 5rem;
 
     background-color: var(--dark-color-background);
     color: var(--dark-color-text-primary);
 
     height: 100%;
+    width: 100%;
 }
 
 .texts {
-    margin-right: 5rem;
+    margin-right: auto;
 }
 
 .title {
@@ -30,6 +31,7 @@
 }
 
 .summary {
+    max-width: 80ch;
     font-family: var(--font-body);
     font-size: 1.125rem;
     font-style: normal;

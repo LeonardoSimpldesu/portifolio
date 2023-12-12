@@ -63,6 +63,7 @@ export default function Contact() {
                         <label htmlFor="">Mensagem</label>
                         <textarea type="text-box" rows="5" cols="33"/>
                     </div>
+                    <input type="submit" className={styles.submit} value="Enviar Email"/>
                 </form>
             </div>
         </section>
