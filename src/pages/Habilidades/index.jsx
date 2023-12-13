@@ -1,7 +1,7 @@
 import React from "react";
-import Tag from "../../components/Tag";
+import {Tag} from "../../components/Tag";
 import TechnologiesDB from "../../json/Technologies.json";
-import Title from "../../components/Title";
+import {Title} from "../../components/Title";
 
 import styled from "styled-components";
 
@@ -56,7 +56,7 @@ export default function Habilidades() {
                 </Title>
                 <Icones>
                     {TechnologiesDB.softSkills.map((element) => {
-                        return <Tag key={element}> {element} </Tag>;
+                        return <Tag title={element.title} key={element}> {element} </Tag>;
                     })}
                 </Icones>
             </div>

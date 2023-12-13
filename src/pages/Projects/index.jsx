@@ -1,7 +1,7 @@
 import React from "react";
 
-import Title from "../../components/Title";
-import Tag from "../../components/Tag";
+import {Title} from "../../components/Title";
+import {Tag} from "../../components/Tag";
 import Project from "../../components/Project";
 
 import ProjectsJson from "../../json/Projects.json";

@@ -3,6 +3,8 @@ import { Outlet } from "react-router-dom";
 
 import Menu from "../../components/Menu";
 import styled from "styled-components";
+import GlobalStyles from "../../components/GlobalStyles";
+
 
 const Corpo = styled.div`
   min-height: 100vh;
@@ -20,6 +22,7 @@ const Container = styled.main`
 export default function Root() {
     return (
         <Corpo>
+            <GlobalStyles/>
             <Menu />
             <Container>
                 <Outlet />
