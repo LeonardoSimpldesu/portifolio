@@ -12,6 +12,18 @@ const Container = styled.section`
 
     height: 100%;
     width: 100%;
+
+    @media (max-width: 768px) {
+    &{
+        flex-direction: column-reverse;
+        gap: 0;
+    }
+}
+    @media (max-width: 640px) {
+    &{
+        padding: 2rem 0;
+    }
+}
 `;
 
 const Button = styled.button`
@@ -21,6 +33,8 @@ const Button = styled.button`
     ${props => props.$primary ? "var(--color-primary)" : "var(--color-secundary)"};
     color: 
     ${props => props.$primary ? "var(--color-primary)" : "var(--dark-color-text-primary)"};
+    margin-right: 
+    ${props => props.$primary ? "2rem" : "0"};
 
     cursor: pointer;
     border-radius: 0.5rem;
@@ -32,7 +46,6 @@ const Button = styled.button`
     line-height: normal;
     border-width: 2px;
     border-style: solid;
-    margin-right: 2rem;
     transition: all 0.2s ease-out;
 
     &:hover{ 
@@ -51,6 +64,12 @@ const Button = styled.button`
 
 const Texts = styled.div`
     margin-right: auto;
+
+    @media (max-width: 768px) {
+    &{
+        text-align: center;
+    }
+    }
 `;
 
 const Title = styled.h1`
@@ -59,6 +78,13 @@ const Title = styled.h1`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    @media (max-width: 768px) {
+    &{
+       margin: 0;
+       margin-top: 2rem;
+    }
+    }
 `;
 
 const TitleEmphasis = styled.span`
@@ -77,6 +103,13 @@ const Summary = styled.p`
     font-weight: 400;
     line-height: 2.1875rem;
     margin: 1rem 0;
+
+    @media (max-width: 768px) {
+    &{
+       margin: 0;
+       margin-bottom: 1rem;
+    }
+    }
 `;
 
 const Emphasis = styled.span`
@@ -87,6 +120,14 @@ const Profile = styled.img`
     width: 14.58331rem;
     border-radius: 0.625rem;
     border: 1px solid var(--color-primary);
+    
+    @media (max-width: 768px) {
+    &{
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+    }
+    }
 `;
 
 export default function Home() {
@@ -102,7 +143,7 @@ export default function Home() {
                 <Button $primary>Entre em Contato</Button>
                 <Button>Curriculo PDF</Button>
             </Texts>
-            <Profile src="./perfil.png" alt="Foto de Leonardo"/>
+            <Profile src={window.innerWidth <= 768 ? "./perfil-circle.jpg" : "./perfil.png"} alt="Foto de Leonardo"/>
         </Container>
     );
 }

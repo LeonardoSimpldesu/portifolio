@@ -5,6 +5,14 @@ import {Title} from "../../components/Title";
 
 import styled from "styled-components";
 
+export const Container = styled.section`
+    @media (max-width: 1024px) {
+    &{
+        padding-bottom: 2rem;
+    }
+}
+`;
+
 export const Icones = styled.div`
     display: flex;
     flex-wrap: wrap;
@@ -19,7 +27,7 @@ export const Icones = styled.div`
 
 export default function Habilidades() {
     return (
-        <section>
+        <Container>
             <div>
                 <Title>Tecnologias usadas no meu dia a dia</Title>
                 <Icones>
@@ -60,6 +68,6 @@ export default function Habilidades() {
                     })}
                 </Icones>
             </div>
-        </section>
+        </Container>
     );
 }

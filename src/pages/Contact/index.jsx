@@ -1,5 +1,5 @@
 import React from "react";
-import {Title} from "../../components/Title";
+import { Title } from "../../components/Title";
 import ContactForm from "../../components/ContactForm";
 import { FaEnvelope, FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
 
@@ -7,83 +7,130 @@ import styled from "styled-components";
 
 const Container = styled.section`
   width: 100%;
+
+  @media (max-width: 1280px) {
+    & {
+    }
+  }
 `;
 
 const Header = styled.div`
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 5rem;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 5rem;
+  align-items: center;
 `;
 
 const Description = styled.p`
-    color: var(--dark-color-text-primary);
-    text-align: center;
-    font-size: 1.125rem;
-    font-weight: 400;
-    line-height: 2.1875rem;
-    width: 100ch;
+  color: var(--dark-color-text-primary);
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 2.1875rem;
+  width: 100ch;
+
+  @media (max-width: 1280px) {
+    & {
+      width: 100%;
+    }
+  }
 `;
 
 const Group = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
 
-    h3 {
+  h3 {
     color: var(--dark-color-text-primary);
     font-family: var(--font-title);
     font-size: 1.5rem;
     font-weight: 700;
-}
+  }
+
+  @media (max-width: 1024px) {
+    & {
+      flex-direction: column-reverse;
+    }
+  }
 `;
 
 const Information = styled.div`
-    display: flex;
-    padding: 2.5rem 2rem;
-    flex-direction: column;
+  display: flex;
+  padding: 2.5rem 2rem;
+  flex-direction: column;
+  gap: 2rem;
 
-    border-radius: 0.5rem;
-    background: var(--color-secundary);
+  border-radius: 0.5rem;
+  background: var(--color-secundary);
+
+  @media (max-width: 1024px) {
+    & {
+      width: 100%;
+      text-align: center;
+      padding: 2.5rem 0;
+    }
+  }
 `;
 
 const Options = styled.div`
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  @media (max-width: 1024px) {
+    & {
+      flex-direction: row;
+      text-align: center;
+      justify-content: space-evenly;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    & {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    & {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
 `;
 
 const Form = styled.form`
-    width: 100%;
-    display: grid;
-    grid-column-gap: 10%;
-    grid-row-gap: 10%;
-    grid-template-columns: 45% 45%;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
+  width: 100%;
+  display: grid;
+  grid-column-gap: 10%;
+  grid-row-gap: 10%;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: 1fr 1fr 2fr 1fr;
 `;
 
 const FormField = styled.div`
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    label{
-        font-size: 1rem;
-        font-weight: 700;
-    }
+  label {
+    font-size: 1rem;
+    font-weight: 700;
+  }
 
-    input{
-        padding: .5rem .25rem;
-        color: var(--dark-color-text-primary);
-        border: none;
-        border-bottom: 1px solid var(--color-primary);
-        background: none;
-        font-family: var(--font-body);
-        font-size: 1rem;
-    }
+  input {
+    padding: 0.5rem 0.25rem;
+    color: var(--dark-color-text-primary);
+    border: none;
+    border-bottom: 1px solid var(--color-primary);
+    background: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+  }
 
-    textarea{
+  textarea {
     background: none;
     border: none;
     border-radius: 0.25rem;
@@ -94,30 +141,26 @@ const FormField = styled.div`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    }
+  }
 
-    gap: 
-    ${props => props.$message ? ".5rem" : ""};
-    width: 
-    ${props => props.$message ? "100%" : ""};
-    grid-column-start: 
-    ${props => props.$message ? "1" : ""};
-    grid-column-end: 
-    ${props => props.$message ? "3" : ""};
+  gap: ${(props) => (props.$message ? ".5rem" : "")};
+  width: ${(props) => (props.$message ? "100%" : "")};
+  grid-column-start: ${(props) => (props.$message ? "1" : "")};
+  grid-column-end: ${(props) => (props.$message ? "3" : "")};
 `;
 
 const Submit = styled.input`
-    width: fit-content;
-    padding: 1rem 1.125rem;
-    border: none;
-    border-radius: 0.5rem;
-    background: var(--color-primary);
-    color: var(--dark-color-text-primary);
-    font-size: 1.125rem;
-    font-weight: 700;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
+  width: fit-content;
+  padding: 1rem 1.125rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--color-primary);
+  color: var(--dark-color-text-primary);
+  font-size: 1.125rem;
+  font-weight: 700;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 4;
 `;
 
 export default function Contact() {
@@ -134,14 +177,13 @@ export default function Contact() {
             </Header>
             <Group>
                 <Information>
-                    <h3>Informações para contato</h3>
-                    <p>Outras formas de me contatar</p>
+                    <div>
+                        <h3>Informações para contato</h3>
+                        <p>Outras formas de me contatar</p>
+                    </div>
 
                     <Options>
-                        <ContactForm
-                            title="Telefone"
-                            information="+55 31 98378-1618"
-                        >
+                        <ContactForm title="Telefone" information="+55 31 98378-1618">
                             <FaPhoneAlt />
                         </ContactForm>
                         <ContactForm
@@ -150,10 +192,7 @@ export default function Contact() {
                         >
                             <FaEnvelope />
                         </ContactForm>
-                        <ContactForm
-                            title="Endereço"
-                            information="Belo Horizonte - MG"
-                        >
+                        <ContactForm title="Endereço" information="Belo Horizonte - MG">
                             <FaLocationArrow />
                         </ContactForm>
                     </Options>
@@ -177,9 +216,9 @@ export default function Contact() {
                     </FormField>
                     <FormField $message>
                         <label htmlFor="">Mensagem</label>
-                        <textarea type="text-box" rows="5" cols="33"/>
+                        <textarea type="text-box" rows="5" cols="33" />
                     </FormField>
-                    <Submit type="submit" value="Enviar Email"/>
+                    <Submit type="submit" value="Enviar Email" />
                 </Form>
             </Group>
         </Container>

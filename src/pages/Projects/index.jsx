@@ -1,7 +1,7 @@
 import React from "react";
 
 import {Title} from "../../components/Title";
-import {Tag} from "../../components/Tag";
+// import {Tag} from "../../components/Tag";
 import Project from "../../components/Project";
 
 import ProjectsJson from "../../json/Projects.json";
@@ -14,11 +14,11 @@ const Container = styled.section`
     gap: 2rem;
 `;
 
-const Filters = styled.div`
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-`;
+// const Filters = styled.div`
+//     display: flex;
+//     justify-content: center;
+//     gap: 2rem;
+// `;
 
 const ProjectList = styled.div`
     display: flex;
@@ -34,11 +34,11 @@ export default function Projects() {
             <Title>
                 Projetos Em Destaque
             </Title>
-            <Filters>
+            {/* <Filters>
                 <Tag>Recentes</Tag>
                 <Tag>Antigos</Tag>
                 <Tag>Complexos</Tag>
-            </Filters>
+            </Filters> */}
             <ProjectList>
                 {ProjectsJson.map((item) => {
                     return(
