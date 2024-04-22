@@ -2,19 +2,34 @@
 <svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
   <defs>
     <style>
-      .cls-1 {
+      .cls-1, .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-3 {
+        fill: #d72626;
+      }
+
+      .cls-2, .cls-4, .cls-5 {
+        fill: #fff;
+      }
+
+      .cls-5 {
+        letter-spacing: 0em;
+      }
+
+      .cls-6 {
+        display: none;
         font-family: Anton-Regular, Anton;
         font-size: 65.34px;
       }
-
-      .cls-2 {
-        fill: #000;
-      }
-
-      .cls-3 {
-        fill: #d72626;
-      }
     </style>
   </defs>
-  <text class="cls-1" transform="translate(2.65 72.84)"><tspan class="cls-2" x="0" y="0">&lt;/</tspan><tspan class="cls-3" x="47.47" y="0">L</tspan><tspan class="cls-2" x="73.44" y="0">&gt;</tspan></text>
+  <text class="cls-6" transform="translate(2.65 72.84)"><tspan class="cls-4" x="0" y="0">&lt;/</tspan><tspan class="cls-3" x="47.44" y="0">L</tspan><tspan class="cls-5" x="73.38" y="0">&gt;</tspan></text>
+  <g>
+    <path class="cls-2" d="M21.93,66.44L3.76,55.46v-13.2l18.16-10.91v11.5l-10.91,6.08,10.91,6.14v11.37Z"/>
+    <path class="cls-2" d="M24.54,72.84l13.07-56.39h11.63l-13.13,56.39h-11.57Z"/>
+    <path class="cls-1" d="M52.57,72.84V16.71h11.24v46.59h11.56v9.54h-22.8Z"/>
+    <path class="cls-2" d="M77.73,66.44v-11.37l10.91-6.14-10.91-6.08v-11.5l18.16,10.91v13.2l-18.16,10.98Z"/>
+  </g>
 </svg>
