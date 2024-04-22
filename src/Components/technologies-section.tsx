@@ -51,9 +51,8 @@ export function TechnologiesSection() {
             <SectionTitle>TECNOLOGIAS</SectionTitle>
             <div className="flex flex-wrap justify-center gap-8 p-12 w-full xl:grid xl:grid-cols-5 ">
                 {technologiesList.map((e, i) => {
-                    const atraso = i * .2
                     return (
-                        <TechnologieCard name={e.name} src={e.src} key={i} atraso={atraso}/>
+                        <TechnologieCard name={e.name} src={e.src} key={i}/>
                     )
                 })}
             </div>
