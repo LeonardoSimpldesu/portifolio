@@ -10,7 +10,7 @@ function App() {
   return (
     <div>
       <NavBar />
-      <main className='container mx-auto flex flex-col min-h-screen  py-44'>
+      <main className='container mx-auto flex flex-col min-h-screen sm:py-44'>
         <Element name='hero-section'>
           <HeroSection />
         </Element>
