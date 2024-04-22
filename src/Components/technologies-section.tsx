@@ -1,6 +1,7 @@
+import { SectionTitle } from "./section-title";
 import { TechnologieCard } from "./technologie-card";
 
-export function TechnologiesSection(){
+export function TechnologiesSection() {
 
     const technologiesList = [
         {
@@ -40,18 +41,19 @@ export function TechnologiesSection(){
             src: "devicon-prisma-original"
         },
         {
-            name: "PostGress",
+            name: "PostGres",
             src: "devicon-postgresql-plain colored"
         },
     ]
 
-    return(
-        <section className="w-full">
-            <h2 className="text-center text-4xl mb-12 font-bold">TECNOLOGIAS</h2>
-            <div className="grid grid-cols-5 gap-8 w-full">
+    return (
+        <section className="w-full my-24">
+            <SectionTitle>TECNOLOGIAS</SectionTitle>
+            <div className="flex flex-wrap justify-center gap-8 p-12 w-full xl:grid xl:grid-cols-5 ">
                 {technologiesList.map((e, i) => {
-                    return(
-                        <TechnologieCard name={e.name} src={e.src} key={i}/>
+                    const atraso = i * .2
+                    return (
+                        <TechnologieCard name={e.name} src={e.src} key={i} atraso={atraso}/>
                     )
                 })}
             </div>

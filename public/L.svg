@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Anton-Regular, Anton;
+        font-size: 65.34px;
+      }
+
+      .cls-2 {
+        fill: #000;
+      }
+
+      .cls-3 {
+        fill: #d72626;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(2.65 72.84)"><tspan class="cls-2" x="0" y="0">&lt;/</tspan><tspan class="cls-3" x="47.47" y="0">L</tspan><tspan class="cls-2" x="73.44" y="0">&gt;</tspan></text>
+</svg>
